@@ -78,9 +78,11 @@ web_modules/
 .next
 out
 
+# Build output
+dist
+
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
@@ -137,3 +139,6 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# MCP
+.mcp.json
