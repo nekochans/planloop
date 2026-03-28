@@ -1,0 +1,38 @@
+{
+  "name": "@nekochans/planloop",
+  "version": "0.1.0",
+  "description": "AIコーディングエージェントが作成した実装計画を他のAIエージェントでレビューを行い品質改善のループを回す為のツールです",
+  "homepage": "https://github.com/nekochans/planloop#readme",
+  "bugs": {
+    "url": "https://github.com/nekochans/planloop/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nekochans/planloop.git"
+  },
+  "license": "MIT",
+  "author": "nekochans",
+  "type": "module",
+  "bin": {
+    "planloop": "dist/bin/planloop.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "lint:prettier": "prettier --check --log-level=warn '**/!(*.min|*-lock).{yaml,yml,md,mdx}'",
+    "prettier": "prettier --write --log-level=warn '**/!(*.min|*-lock).{yaml,yml,md,mdx}'",
+    "lint": "ultracite check && npm run lint:prettier",
+    "format": "ultracite fix && npm run prettier"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.7",
+    "@types/node": "25.5.0",
+    "prettier": "3.8.1",
+    "typescript": "6.0.2",
+    "ultracite": "7.3.2",
+    "vitest": "4.1.2"
+  }
+}
